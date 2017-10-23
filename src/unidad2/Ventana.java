@@ -17,7 +17,7 @@ public class Ventana extends JFrame{
 	private JScrollPane scrollPane;
 	private JTextArea textArea;
 	private JButton btnAgregarp, btnAgregaru, btnEliminarp, btnEliminaru, btnAdelante, btnAtras;
-	private ListaDoble ld = new ListaDoble();
+	//private ListaDoble ld = new ListaDoble();
 	private JTextField txid, txnombre, txartista, txgen, txalbum;
 	private JLabel lblid, lblNombre, lblArtista;
 	
@@ -46,7 +46,7 @@ public class Ventana extends JFrame{
 					m.setArtista(txartista.getText());
 					m.setGenero(txgen.getText());
 					m.setAlbum(txalbum.getText());
-					ld.agregarp(m);
+					//ld.agregarp(m);
 					txid.setText("");
 					txnombre.setText("");
 					txartista.setText("");
@@ -71,7 +71,7 @@ public class Ventana extends JFrame{
 					m.setArtista(txartista.getText());
 					m.setGenero(txgen.getText());
 					m.setAlbum(txalbum.getText());
-					ld.agregaru(m);
+				//	ld.agregaru(m);
 					txid.setText("");
 					txnombre.setText("");
 					txartista.setText("");
@@ -89,7 +89,7 @@ public class Ventana extends JFrame{
 		btnEliminarp = new JButton("Eliminar Primero");
 		btnEliminarp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ld.elimianrp();
+			//	ld.elimianrp();
 			}
 		});
 		btnEliminarp.setBounds(59, 346, 148, 35);
@@ -98,7 +98,7 @@ public class Ventana extends JFrame{
 		btnEliminaru = new JButton("Eliminar Ultimo");
 		btnEliminaru.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ld.elimianru();
+			//	ld.elimianru();
 			}
 		});
 		btnEliminaru.setBounds(400, 346, 148, 35);
@@ -107,7 +107,7 @@ public class Ventana extends JFrame{
 		btnAdelante = new JButton("Recorrer Adelante");
 		btnAdelante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textArea.append(textArea.getText().isEmpty() ? ld.adelante().toString() : "\n"+ld.adelante().toString());
+			//	textArea.append(textArea.getText().isEmpty() ? ld.adelante().toString() : "\n"+ld.adelante().toString());
 			}
 		});
 		btnAdelante.setBounds(59, 408, 148, 35);
@@ -116,7 +116,7 @@ public class Ventana extends JFrame{
 		btnAtras = new JButton("Recorrer Atras");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textArea.append(textArea.getText().isEmpty() ? ld.atras().toString() : "\n"+ld.atras().toString());
+				//textArea.append(textArea.getText().isEmpty() ? ld.atras().toString() : "\n"+ld.atras().toString());
 			}
 		});
 		btnAtras.setBounds(400, 408, 148, 35);
