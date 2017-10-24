@@ -1,52 +1,64 @@
 package unidad2;
 
-public class Musica {
+public class Musica 
+{
 	
 	private int id;
 	private String nombre, artista, genero, album;
 	
-	public int getId() {
+	public int getId() 
+	{
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(int id)
+	{
 		this.id = id;
 	}
 	
-	public String getNombre() {
+	public String getNombre() 
+	{
 		return nombre;
 	}
 	
-	public void setNombre(String nombre) {
+	public void setNombre(String nombre) 
+	{
 		this.nombre = nombre;
 	}
 	
-	public String getArtista() {
+	public String getArtista() 
+	{
 		return artista;
 	}
 	
-	public void setArtista(String artista) {
+	public void setArtista(String artista)
+	{
 		this.artista = artista;
 	}
 	
-	public String getGenero() {
+	public String getGenero() 
+	{
 		return genero;
 	}
 	
-	public void setGenero(String genero) {
+	public void setGenero(String genero) 
+	{
 		this.genero = genero;
 	}
 	
-	public String getAlbum() {
+	public String getAlbum()
+	{
 		return album;
 	}
 	
-	public void setAlbum(String album) {
+	public void setAlbum(String album)
+	{
 		this.album = album;
 	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Musica [id=" + id + ", nombre=" + nombre + ", artista=" + artista + ", genero=" + genero + ", album="
 				+ album + "]";
 	}

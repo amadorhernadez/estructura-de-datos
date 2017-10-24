@@ -12,7 +12,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-public class Ventana extends JFrame{
+public class Ventana extends JFrame
+{
 	
 	private JScrollPane scrollPane;
 	private JTextArea textArea;
@@ -21,7 +22,8 @@ public class Ventana extends JFrame{
 	private JTextField txid, txnombre, txartista, txgen, txalbum;
 	private JLabel lblid, lblNombre, lblArtista;
 	
-	public Ventana() {
+	public Ventana() 
+	{
 		super("Lista Doble");
 		setSize(630, 493);
 		setLocationRelativeTo(null);
@@ -37,8 +39,10 @@ public class Ventana extends JFrame{
 		scrollPane.setViewportView(textArea);
 		
 		btnAgregarp = new JButton("Agregar Primero");
-		btnAgregarp.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnAgregarp.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
 				if(!(txid.getText().isEmpty() && txnombre.getText().isEmpty() && txartista.getText().isEmpty() && txgen.getText().isEmpty() && txalbum.getText().isEmpty())) {
 					Musica m = new Musica();
 					m.setId(Integer.parseInt(txid.getText()));
@@ -53,7 +57,8 @@ public class Ventana extends JFrame{
 					txgen.setText("");
 					txalbum.setText("");
 				}
-				else {
+				else
+				{
 					JOptionPane.showMessageDialog(Ventana.this, "Tiene que llenar todos los campos", null, JOptionPane.ERROR_MESSAGE);
 				}
 			}
@@ -62,8 +67,10 @@ public class Ventana extends JFrame{
 		getContentPane().add(btnAgregarp);
 		
 		btnAgregaru = new JButton("Agregar Ultimo");
-		btnAgregaru.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnAgregaru.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
 				if(!(txid.getText().isEmpty() && txnombre.getText().isEmpty() && txartista.getText().isEmpty() && txgen.getText().isEmpty() && txalbum.getText().isEmpty())) {
 					Musica m = new Musica();
 					m.setId(Integer.parseInt(txid.getText()));
@@ -78,7 +85,8 @@ public class Ventana extends JFrame{
 					txgen.setText("");
 					txalbum.setText("");
 				}
-				else {
+				else
+				{
 					JOptionPane.showMessageDialog(Ventana.this, "Tiene que llenar todos los campos", null, JOptionPane.ERROR_MESSAGE);
 				}
 			}
@@ -87,17 +95,21 @@ public class Ventana extends JFrame{
 		getContentPane().add(btnAgregaru);
 		
 		btnEliminarp = new JButton("Eliminar Primero");
-		btnEliminarp.addActionListener(new ActionListener() {
+		btnEliminarp.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent arg0) {
 			//	ld.elimianrp();
+				
 			}
 		});
 		btnEliminarp.setBounds(59, 346, 148, 35);
 		getContentPane().add(btnEliminarp);
 		
 		btnEliminaru = new JButton("Eliminar Ultimo");
-		btnEliminaru.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnEliminaru.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0)
+			{
 			//	ld.elimianru();
 			}
 		});
@@ -105,7 +117,8 @@ public class Ventana extends JFrame{
 		getContentPane().add(btnEliminaru);
 		
 		btnAdelante = new JButton("Recorrer Adelante");
-		btnAdelante.addActionListener(new ActionListener() {
+		btnAdelante.addActionListener(new ActionListener()
+		{
 			public void actionPerformed(ActionEvent e) {
 			//	textArea.append(textArea.getText().isEmpty() ? ld.adelante().toString() : "\n"+ld.adelante().toString());
 			}
@@ -114,8 +127,10 @@ public class Ventana extends JFrame{
 		getContentPane().add(btnAdelante);
 		
 		btnAtras = new JButton("Recorrer Atras");
-		btnAtras.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnAtras.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
 				//textArea.append(textArea.getText().isEmpty() ? ld.atras().toString() : "\n"+ld.atras().toString());
 			}
 		});
@@ -170,6 +185,7 @@ public class Ventana extends JFrame{
 		setVisible(true);
 	}
 
+	
 	public static void main(String[] args) {
 		new Ventana();
 	}
