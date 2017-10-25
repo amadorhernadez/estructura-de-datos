@@ -79,10 +79,10 @@ public class ListaDoble {
 		StringBuilder cadena = new StringBuilder();
 		Nodo temporal = new Nodo();
 		temporal=this.getHead();
-		cadena.append("HEAD<-->");
+		cadena.append("HEAD<--->");
 		while(temporal!=null){
 			cadena.append(temporal.getDato());
-			cadena.append("<-->");
+			cadena.append("<--->");
 			temporal=temporal.getSiguiente();
 		}
 		cadena.append("NULL");

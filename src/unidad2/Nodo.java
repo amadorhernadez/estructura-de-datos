@@ -2,6 +2,8 @@ package unidad2;
 
 public class Nodo {
 	
+	
+	//Clase nodo
 	private Musica dato;
 	private Nodo anterior;
 	private Nodo siguiente;

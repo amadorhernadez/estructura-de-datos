@@ -25,7 +25,7 @@ public class Ventana extends JFrame
 	public Ventana() 
 	{
 		super("Lista Doble");
-		setSize(630, 493);
+		setSize(630, 490);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
